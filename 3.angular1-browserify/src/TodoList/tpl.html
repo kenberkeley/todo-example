@@ -1,0 +1,7 @@
+<ul>
+  <li ng-repeat="todo in ctrl.todos"
+    ng-class="todo.completed ? 'finished' : 'unfinished'"
+    ng-click="ctrl.handleClick(todo.id)">
+    {{ todo.text }}
+  </li>
+</ul>

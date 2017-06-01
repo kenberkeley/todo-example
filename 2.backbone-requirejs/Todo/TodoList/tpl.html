@@ -1,0 +1,6 @@
+<!-- 使用 underscore.js 的模板引擎 -->
+<% _.each(todos, function (todo) { %>
+  <li data-id="<%= todo.id %>" class="<%= todo.completed ? 'finished' : 'unfinished' %>">
+    <%= todo.text %>
+  </li>
+<% }) %>

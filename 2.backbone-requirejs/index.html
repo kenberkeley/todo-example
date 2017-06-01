@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>简易待办事项 · Backbone.js + RequireJS 版</title>
+</head>
+<body>
+<script src="//cdn.bootcss.com/require.js/2.1.20/require.min.js"></script>
+<script>
+require.config({
+  paths: {
+    'jquery': '//cdn.bootcss.com/jquery/2.2.4/jquery.min',
+    'underscore': '//cdn.bootcss.com/underscore.js/1.8.3/underscore-min',
+    'backbone': '//cdn.bootcss.com/backbone.js/1.2.3/backbone-min',
+    'text': '//cdn.bootcss.com/require-text/2.0.12/text.min',
+    'css': '//cdn.bootcss.com/require-css/0.1.10/css.min',
+    'uuid': '//cdn.bootcss.com/node-uuid/1.4.8/uuid.min'
+  }
+});
+
+require(['jquery', 'Todo/index'], function ($, Todo) {
+  $('body').prepend(new Todo().render());
+});
+</script>
+</body>
+</html>

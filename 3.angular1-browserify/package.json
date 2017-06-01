@@ -1,0 +1,15 @@
+{
+  "name": "angular1-browserify",
+  "scripts": {
+    "build": "browserify -t cssify -t [ stringify --extensions [.html] ] src/app.js > dist/bundle.js"
+  },
+  "dependencies": {
+    "angular": "^1.4.14",
+    "uuid": "^3.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^14.4.0",
+    "cssify": "^1.0.3",
+    "stringify": "^5.1.0"
+  }
+}

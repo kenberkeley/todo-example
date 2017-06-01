@@ -1,0 +1,23 @@
+// http://eslint.org/docs/user-guide/configuring
+{
+  root: true,
+  parser: 'babel-eslint',
+  parserOptions: {
+    sourceType: 'module'
+  },
+  env: {
+    browser: true,
+  },
+  globals: {
+    __DEV__: false,
+    __PROD__: false
+  },
+  extends: 'standard',
+  plugins: [
+    'html' // required to lint *.vue files
+  ],
+  'rules': {
+    'arrow-parens': 0, // allow paren-less arrow functions
+    'generator-star-spacing': 0 // allow async-await
+  }
+}
